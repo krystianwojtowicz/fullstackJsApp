@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Strongman Data</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    form {
+      display: flex;
+      /* flex-direction: column; */
+      justify-content: center;
+      align-items: flex-end;
+      margin-top: 10%;
+    }
+    .form-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    label, input, button {
+      padding: 10px;
+      margin-left: 10px;
+    }
+    label {
+      padding-left: 0px;
+    }
+    .strongman-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .error-message {
+      color: red;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form>
+    <div class="form-item">
+      <label for="year">Year of competition: </label>
+      <input type="text" placeholder="Enter year of competition" id="year" name="year" required>
+    </div>
+    <button type="submit">SUBMIT</button>
+  </form>
+  <div class="error-message"></div>
+
+  <div class="strongman-info">
+    <h1 class="yearOfCompetition"></h1>
+    <h4 class="champion"></h4>
+    <h4 class="runnerup"></h4>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
